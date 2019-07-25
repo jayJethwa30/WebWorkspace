@@ -53,7 +53,7 @@ public class AccountServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		try {
-			out.println("The deails are");
+			out.println("The deails are as follows");
 			int i_aid=Integer.parseInt(request.getParameter("aid"));
 			String s_aname=request.getParameter("aname");
 			
