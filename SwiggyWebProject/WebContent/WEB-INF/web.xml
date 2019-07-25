@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <context-param>
+    <param-name>comp</param-name>
+    <param-value>Larsen and Toubro Infotech</param-value>
+  </context-param>
+  <context-param>
+    <param-name>addr</param-name>
+    <param-value>Mahape, Navi Mumbai</param-value>
+  </context-param>
+
+	<servlet>
+		<servlet-name>MyColorServlet</servlet-name>
+		<servlet-class>com.lti.controller.MyColorServlet</servlet-class>
+		<init-param>
+			<param-name>myname</param-name>
+			<param-value>Rudresh</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyColorServlet</servlet-name>
+		<url-pattern>/MyColorServlet</url-pattern>
+	</servlet-mapping>
+	
+  <session-config>
+  	<session-timeout>90</session-timeout>
+  </session-config>
+  <display-name>SwiggyWebProject</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
