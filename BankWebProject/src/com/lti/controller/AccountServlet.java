@@ -53,6 +53,7 @@ public class AccountServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		try {
+			out.println("The deails are");
 			int i_aid=Integer.parseInt(request.getParameter("aid"));
 			String s_aname=request.getParameter("aname");
 			
@@ -74,7 +75,7 @@ public class AccountServlet extends HttpServlet {
 			System.out.println(" Account Inserted");
 			
 			ServletContext application=getServletContext();
-			List<Account> mylist=(List<Account>) application.getAttribute("acclist");
+			List<Account> mylist=(List<Account>)application.getAttribute("acclist");
 			mylist.add(ob);
 			application.setAttribute("acclist", mylist);
 			
